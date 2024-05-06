@@ -1,4 +1,4 @@
-class Ticketera
+static class Ticketera
 {
     private Dictionary<int,Cliente> DicCliente = new dictionary<int,Cliente>();
     private int UltimoIdEntrada{get;set;} = 0;
