@@ -1,10 +1,12 @@
 static class Ticketera
 {
-    private Dictionary<int,Cliente> DicCliente = new dictionary<int,Cliente>();
+    private Dictionary<int,Cliente> DicCliente = new Dictionary<int,Cliente>();
     private int UltimoIdEntrada{get;set;} = 0;
-    public int DevolverUltimoId()
+    
+    public int DevolverUltimoId(int idEntradaUltimo)
     {
-
+        UltimoIdEntrada = idEntradaUltimo;
+        return UltimoIdEntrada;
     }
 
     public int AgregarCliente(Cliente cliente)
