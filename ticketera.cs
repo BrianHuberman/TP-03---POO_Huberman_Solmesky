@@ -31,7 +31,22 @@ static class Ticketera
     }
     public int CambiarEntrada(int id, int tipo, int cantidad)
     {
+        if(DicCliente.ContainsKey(id))
+        {
+            if(tipo * cantidad > DicCliente[id].TipoEntrada *DicCliente[id].Cantidad)
+            {
+                DicCliente[id].TipoEntrada = tipo;
+                DicCliente[id].Cantidad = cantidad;
+                
+            }
+        }
+        else 
+        {
+            infoCliente = null;
+        }
         
+        return infoCliente;
+
     }
     public List <string> estadisticasTicketera()
     {
