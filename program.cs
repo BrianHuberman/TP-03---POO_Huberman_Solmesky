@@ -3,7 +3,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        int ultimoID, dni, tipoEntrada, cantidad;
+        int dni, tipoEntrada, cantidad;
         string nombre, apellido;
         double fechaInscrpcion;
         dni = ingresarInt("Ingrese su DNI");
@@ -11,12 +11,11 @@ class Program
         cantidad = ingresarInt("Ingrese la cantidad");
         nombre= ingresarCadena("Ingrese su nombre");
         apellido= ingresarCadena("Ingrese su apellido");
-        fechaInscrpcion= ingresarDouble("Ingrese la fechs de inscripcion");
+        fechaInscrpcion= ingresarDouble("Ingrese la fecha de inscripcion");
 
         Cliente cliente = new Cliente(dni, apellido, nombre, fechaInscrpcion, tipoEntrada, cantidad);
-        ultimoID++;
-        ultimoID = Ticketera.DevolverUltimoId(ultimoID);
         cliente = Ticketera.AgregarCliente(cliente);
+      
     }
     static int ingresarInt(string m)
     {
