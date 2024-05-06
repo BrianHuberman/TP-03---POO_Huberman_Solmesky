@@ -11,7 +11,8 @@ static class Ticketera
 
     public int AgregarCliente(Cliente cliente)
     {
-
+        DicCliente.Add(cliente);
+        return UltimoIdEntrada;
     }
 
     public Cliente BuscarCliente(int id)
